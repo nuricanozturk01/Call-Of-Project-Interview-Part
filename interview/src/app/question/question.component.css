@@ -1,0 +1,45 @@
+body {
+  height: 100%;
+  background-color: rgb(30, 30, 30);
+  font-family: Arial, sans-serif;
+}
+
+
+.question_container {
+  background-color: rgb(30, 30, 30);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3282B8;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.btn-outline-primary {
+  color: #fff;
+  background-color: #0077b5;
+  border-color: #0077b5;
+  transition: all 0.3s ease;
+}
+
+
+.btn-outline-primary:hover {
+  color: #0077b5; /* LinkedIn mavi */
+  background-color: #1B262C; /* Beyaz arka plan */
+}
+
+
+.btn-check:checked + .btn-outline-primary,
+.btn-check:checked:focus + .btn-outline-primary,
+.btn-check:checked + .btn-outline-primary.active {
+  color: #fff; /* Beyaz yazı rengi */
+  background-color: #1B262C; /* Daha koyu mavi tonu */
+  border-color: #004c7f; /* Daha koyu mavi tonu */
+}
+
+.ow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

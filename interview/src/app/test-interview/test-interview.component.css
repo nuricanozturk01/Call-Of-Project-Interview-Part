@@ -1,0 +1,66 @@
+.test-interview-container {
+  height: 100vh;
+  background-color: rgb(30, 30, 30);
+  padding: 20px;
+}
+
+/* Timer container'ının stili */
+#timerContainer {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #0077b5; /* LinkedIn mavi */
+  border-radius: 2%;
+}
+
+
+.question_container {
+  background-color: rgb(30, 30, 30);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px; /* Köşeleri yuvarlat */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
+}
+
+/* Buton stillemesi */
+.btn-outline-primary {
+  color: #fff; /* Beyaz yazı rengi */
+  background-color: #0077b5; /* LinkedIn mavi */
+  border-color: #0077b5; /* LinkedIn mavi */
+  transition: all 0.3s ease; /* Geçiş efekti */
+}
+
+/* Buton hover efekti */
+.btn-outline-primary:hover {
+  color: #0077b5; /* LinkedIn mavi */
+  background-color: #fff; /* Beyaz arka plan */
+}
+
+/* Seçili buton stillemesi */
+.btn-check:checked + .btn-outline-primary,
+.btn-check:checked:focus + .btn-outline-primary,
+.btn-check:checked + .btn-outline-primary.active {
+  color: #fff; /* Beyaz yazı rengi */
+  background-color: #004c7f; /* Daha koyu mavi tonu */
+  border-color: #004c7f; /* Daha koyu mavi tonu */
+}
+:host ::ng-deep {
+  .item {
+    font-size: 25px;
+
+    &:nth-child(1) {
+      color: white !important;
+    }
+
+    &:nth-child(2) {
+      color: white;
+    }
+
+    &:nth-child(3) {
+      color: white;
+    }
+  }
+}

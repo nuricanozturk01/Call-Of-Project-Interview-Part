@@ -1,0 +1,98 @@
+<p-toast key="tst"></p-toast>
+<div class="create-question-container">
+  <div>
+    <p-sidebar [(visible)]="visibleSideBar" position="left">
+      <div class="flex-column d-flex align-content-center justify-content-center align-items-center row-cols-1">
+
+        <button pButton pRipple style="background-color: rgb(237,94,105);border-color: red" label="Remove All Questions"
+                (click)="handleRemoveAllQuestions()" icon="pi pi-trash"></button>
+
+        <div class="flex-column d-flex align-content-center justify-content-center align-items-center row-cols-1"
+             style="margin-top: 10px" *ngFor="let q of questions; let i = index">
+
+          <div class="flex-row d-flex align-content-center justify-content-center align-items-center">
+
+            <button pButton label="Question-{{ i + 1 }}" (click)="handleGetQuestion(i )"
+                    class="align-items-center p-button-raised p-button-success"
+                    [style]="{width: '200px', backgroundColor: 'rgb(100,181,246)', borderStyle:'none'}"></button>
+
+             <span style="margin-left: 10px"></span>
+
+            <p-button icon="pi pi-trash" (click)="handleRemoveQuestion(i)" class="p-button-raised p-button-danger"
+                      style="margin-right: 10px"></p-button>
+          </div>
+
+        </div>
+      </div>
+    </p-sidebar>
+    <p-button type="button" class="mr-2" (click)="visibleSideBar = true" icon="pi pi-arrow-right"></p-button>
+  </div>
+
+  <div class="question-prepare-container">
+    <div class="question-prepare-body">
+      <div class="question-prepare-body-header">
+
+        <div class="question-prepare-body-body">
+          <div class="question-prepare-body-body-left">
+            <div class="question-prepare-body-body-left-header">
+              <h4>Question</h4>
+            </div>
+            <div class="card flex justify-content-center">
+              <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="question" [autoResize]="true"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="question-prepare-body-body-right">
+          <div class="question-prepare-body-body-right-header">
+            <h4>Options</h4>
+          </div>
+          <div class="question-prepare-body-body-right-body">
+
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                A
+              </span>
+              <input pInputText [(ngModel)]="optionAStr" placeholder="Option-A"/>
+              <p-radioButton class="radio-btn" name="A" value="A" [(ngModel)]="correctOption"></p-radioButton>
+            </div>
+
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                B
+              </span>
+              <input pInputText placeholder="Option-B" [(ngModel)]="optionBStr"/>
+              <p-radioButton class="radio-btn" name="B" value="B" [(ngModel)]="correctOption"></p-radioButton>
+            </div>
+
+
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                C
+              </span>
+              <input pInputText placeholder="Option-C" [(ngModel)]="optionCStr"/>
+              <p-radioButton class="radio-btn" name="C" value="C" [(ngModel)]="correctOption"></p-radioButton>
+            </div>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                D
+              </span>
+              <input pInputText placeholder="Option-D" [(ngModel)]="optionDStr"/>
+              <p-radioButton class="radio-btn" name="D" value="D" [(ngModel)]="correctOption"></p-radioButton>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-column d-flex align-content-center justify-content-center align-items-center">
+       <span>
+            <p-button style="margin: 30px;" (onClick)="handleSaveQuestionButton()" label="Save Question"
+                      class="p-button-raised p-button-success"></p-button>
+        <p-button (onClick)="handleAddNewQuestionButton()" icon="pi pi-plus" [rounded]="true"></p-button>
+      </span>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center gap-3">
+    <p-button style="margin: 30px;" (onClick)="handleCreateInterviewButton()" label="Create Test Interview"
+              class="p-button-raised p-button-success"></p-button>
+  </div>
+</div>

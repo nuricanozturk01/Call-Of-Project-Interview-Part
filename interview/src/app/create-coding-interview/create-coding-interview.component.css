@@ -1,0 +1,64 @@
+.btn {
+  border-radius: 5px;
+  background-color: #004c7f;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #BBE1FA;
+  color: #3282B8;
+  cursor: pointer;
+}
+
+.create-question-container {
+  background-color: rgb(30, 30, 30);
+  height: 100vh;
+  padding: 10px;
+}
+
+.question-prepare-container {
+  overflow: auto; /* Değişiklik: "scroll" yerine "auto" */
+  margin: 20px auto; /* Değişiklik: margin yatayda otomatik hizalanacak */
+  border-style: solid;
+  border-color: #3282B8;
+  background-color: rgb(32, 38, 46);
+  width: 65%;
+  padding: 20px;
+  border-width: 1px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+}
+
+.input-output-pair {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 10px auto; /* Değişiklik: dikeyde otomatik hizalanacak */
+  border-width: 1px;
+  border-color: #3282B8;
+  background-color: rgb(32, 38, 46);
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h4 {
+  color: #BBE1FA;
+}
+
+.p-inputgroup {
+  margin: 10px auto; /* Değişiklik: dikeyde otomatik hizalanacak */
+}
+
+.question-prepare-body-body-left-header,
+.question-prepare-body-body-right-header {
+  margin: 10px auto; /* Değişiklik: dikeyde otomatik hizalanacak */
+  border-color: #3282B8;
+  background-color: rgb(32, 38, 46);
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
